@@ -36,6 +36,7 @@ const Sidedrawer = () => {
   const user = useSelector((state) => state.userSlice.userData);
   const chats = useSelector((state) => state.chatSlice.chats);
   const selectedChat = useSelector((state) => state.chatSlice.selectedChat);
+  const backendUrl = import.meta.env. VITE_BACKEND_URL
 
   const toast = useToast();
   const dispatch = useDispatch();
@@ -68,7 +69,7 @@ const Sidedrawer = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `${window.location.origin}/api/user?search=${search}`,
+        `${backendUrl}/api/user?search=${search}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
@@ -93,7 +94,7 @@ const Sidedrawer = () => {
     try {
       setLoadingChat(true);
       const response = await axios.post(
-        `${window.location.origin}/api/chat`,
+        `${backendUrl}/api/chat`,
         { userId },
         {
           headers: {

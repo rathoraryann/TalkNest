@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import Chatbox from "../components/Chatbox";
+import Chatbox from "../components/ChatBox";
 import MyChats from "../components/MyChats";
 import SideDrawer from "../components/subComponents/Sidedrawer";
 

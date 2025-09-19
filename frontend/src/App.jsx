@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Home from "./Pages/Home";
-import Chat from "./Pages/Chat";
-import NotFound from "./Pages/NotFound";
+import Home from "./pages/Home";
+import Chat from "./pages/Chat";
+import NotFound from "./pages/NotFound";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { login } from "./store/slice/userSlice";

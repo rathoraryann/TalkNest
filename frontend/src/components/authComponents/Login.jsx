@@ -17,6 +17,7 @@ import { isValidEmail } from "../miscellaneous/Regx";
 
 const Login = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_URL
+  console.log(backendUrl)
   const toast = useToast();
   const navigate = useNavigate();
   const dispatch = useDispatch();

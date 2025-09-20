@@ -11,8 +11,14 @@ require('dotenv').config()
 const app = express();
 
 // CORS enables the backend to respond to requests from the frontend, even though they originate from different origins(ports)
-app.use(cors());
-
+app.use(cors({
+  origin: [,
+    "http://localhost:5173",
+    "https://talk-nest-seven.vercel.app"
+],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 // Allows to load env variables from .env file
